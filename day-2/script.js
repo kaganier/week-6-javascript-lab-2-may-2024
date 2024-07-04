@@ -27,10 +27,12 @@ function partOneB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is equal to the answer
-
+if (guessNumber === answer){
     // 2. if it is, set the message for correct.
-
+messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+} else {
     // 3. if not, set the message for wrong guess.
+messageParagraph.innerHTML = `You guessed the right number!`;
 
 }
 
@@ -64,13 +66,16 @@ function partTwoB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
-
+  if(guessNumber < answer) {
     // 2. if it is, set the message for too low.
-
+    messageParagraph.innerHTML = `Your guess is too low! Try again.`;
+  } else if (guessNumber > answer) {
     // 3. if not, set the message for too high.
-
+    messageParagraph.innerHTML = `Your guess is too high! Try again.`;
+  } else {
     // 4. if not, set the message for correct.
-
+    messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+  }
 }
 
 // Example
@@ -99,17 +104,18 @@ function partThreeB () {
   let color;
   color = prompt("What color describes your mood today?");
   // 1. check for your first color
-
+if (color === "red"){
     // 2. give the message for this color
-
+messageParagragh.innerHTML = `Are you feeling romantic?`;
   // 3. check for the next color
-
+}else if(color === "green"){
     // 4. give the message for the next color
-    
+    messageParagraph.innerHTML = `You must be feeling lucky!`;
+} else {
   // 5. otherwise, ask for another color
-
+messageParagraph.innerHTML = `Pick another color!`;
 }
-
+}
 // Example
 // Rock Paper Scissors
 function partFourA () {
@@ -134,5 +140,19 @@ function partFourA () {
 function partFourB () {
   alert("Try it!");
 
+}
+if (playerOne === "paper" && playerTwo === "rock"){
+  messageParagraph.innerHTML = "Player one wins!";
+} else if (playerOne ==== "rock" && playerTwo === "paper") {
+  messageParagraph.innerHTML = "Player two wins!":
+} else if (playerOne === "scissors" && playerTwo === "paper") {
+messageParagraph.innerHTML ="player one wins!";
+}else if (playerOne === "paper" && playerTwo === "scissors") {
+  messageParagraph.innerHTML = "player two wins!";
+} else if (playerOne === "rock" && plsyerTwo === "scissors") {
+  messageParagraph.innerHTML = "player one wins!";
+} else if (playerOne === "scissors" && playertwo === "rock") {
+  messageParagraph = "player two wins!";
+  
 }
 
